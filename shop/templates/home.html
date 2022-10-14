@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block title%}
     Home
@@ -7,6 +8,42 @@
 
 {% block content %}
 
-    <h1>Home Page</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <img class="img-fluid" src="{% static 'images/sale1.png' %}" alt="">
+        </div>
+    </div>
 
+    <div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto my-2  text-center">
+                    <h1 class="text-capitalize font-weight-bold">Our products</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="row">
+                {% for i in 'aaaaaaaa' %}
+                <div class="col-9 mx-auto col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <div class="p-4">
+                            <img class="card-img-top" src="{% static 'images/01.jpg' %}" alt="">
+                        </div>
+                        <div class="card-footer d-flex justify-content-between" style="background: transparent;border-color: transparent;">
+                            <p class="font-weight-bold mb-0"> Best car</p>
+                            <h5 class="text-info font-italic mb-0">
+                                1.000.000$
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
